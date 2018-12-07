@@ -25,9 +25,9 @@ const signInSuccess = function (signInResponse) {
   $('#change-password').removeClass('hidden')
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
-  $('#sign-in').addClass('hidden')
-  $('#game-box').removeClass('hidden')
-  $('.fixUp').removeClass('hidden')
+  $('#sign-in').fadeOut(200)
+  // $('.form-group').removeClass('hidden')
+  $('#create-run').removeClass('hidden')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -44,9 +44,8 @@ const signOutSuccess = function () {
   $('#change-password').trigger('reset')
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
-  $('#sign-in').removeClass('hidden')
-  $('#game-box').addClass('hidden')
-  $('.box').empty()
+  // $('#sign-in').fadeIn(200)
+  // $('.form-group').addClass('hidden')
 }
 module.exports = {
   signUpSuccess,
