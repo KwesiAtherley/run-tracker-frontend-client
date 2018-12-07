@@ -7,6 +7,7 @@ const ui = require('./ui.js')
 const onCreateRun = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
+  console.log(userData)
   $(event.target).trigger('reset')
   api.createRun(userData)
     .then(ui.createRunSuccess)
