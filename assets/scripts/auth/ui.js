@@ -45,7 +45,7 @@ const signOutSuccess = function () {
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
   // $('#sign-in').fadeIn(200)
-  // $('.form-group').addClass('hidden')
+  $('#create-run').addClass('hidden')
 }
 module.exports = {
   signUpSuccess,
