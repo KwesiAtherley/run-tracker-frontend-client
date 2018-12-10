@@ -23,6 +23,11 @@ $(() => {
     $('#sign-up').hide()
     $('#message').show(500)
   })
+  $('.signout-btn').on('click', function () {
+    $('#sign-out').show()
+    $('#sign-up').hide()
+    $('#message').show(500)
+  })
   $('#create-run').on('submit', runEvents.onCreateRun)
   $('#show-all-activity').on('click', runEvents.onGetRun)
   $('#update-run').on('submit', runEvents.onUpdateRun)

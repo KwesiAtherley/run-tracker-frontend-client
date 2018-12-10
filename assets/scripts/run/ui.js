@@ -8,6 +8,7 @@ const onGetRunSuccess = function (data) {
 }
 
 const onUpdateRunSuccess = function (data) {
+  $('#run-message').show(500)
   $('#run-message').html('Your run has been updated')
 }
 

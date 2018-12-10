@@ -60,6 +60,7 @@ const signOutSuccess = function () {
   $('.signup-btn').removeClass('hidden')
   $('.signout-btn').addClass('hidden')
   $('.changepass-btn').addClass('hidden')
+  $('#run-message').addClass('hidden')
   $('#content').empty()
   setTimeout(function () {
     $('#message').fadeOut().empty()
