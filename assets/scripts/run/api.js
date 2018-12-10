@@ -3,7 +3,7 @@ const store = require('../store.js')
 const config = require('../config.js')
 
 const createRun = (runData) => {
-  console.log(store.user.token)
+  // console.log(store.user.token)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/runs',
@@ -23,7 +23,7 @@ const createRun = (runData) => {
 }
 
 const updateRun = (id, distance, time, date) => {
-  console.log(id)
+  // console.log(id)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + `/runs/${id}`,

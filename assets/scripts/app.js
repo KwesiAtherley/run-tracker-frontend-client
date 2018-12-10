@@ -16,13 +16,15 @@ $(() => {
   $('.signup-btn').on('click', function () {
     $('#sign-up').show()
     $('#sign-in').hide()
+    $('#message').show(500)
   })
   $('.signin-btn').on('click', function () {
     $('#sign-in').show()
     $('#sign-up').hide()
+    $('#message').show(500)
   })
   $('#create-run').on('submit', runEvents.onCreateRun)
-  $('#activity').on('click', runEvents.onGetRun)
+  $('#show-all-activity').on('click', runEvents.onGetRun)
   $('#update-run').on('submit', runEvents.onUpdateRun)
   $('#delete-run').on('submit', runEvents.onDeleteRun)
 })

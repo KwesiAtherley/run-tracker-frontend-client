@@ -49,6 +49,10 @@ const signOutSuccess = function () {
   $('#activity').addClass('hidden')
   $('#update-run').addClass('hidden')
   $('#delete-run').addClass('hidden')
+  $('#content').empty()
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 2000)
 }
 module.exports = {
   signUpSuccess,

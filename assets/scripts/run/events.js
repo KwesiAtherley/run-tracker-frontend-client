@@ -7,7 +7,7 @@ const ui = require('./ui.js')
 const onCreateRun = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  console.log(userData)
+  // console.log(userData)
   $(event.target).trigger('reset')
   api.createRun(userData)
     .then(ui.createRunSuccess)
@@ -19,13 +19,12 @@ const onGetRun = function (event) {
   api.getRun()
     .then(ui.onGetRunSuccess)
     .catch(ui.failure)
-  // console.log('onGetRun')
 }
 
 const onUpdateRun = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  console.log(userData)
+  // console.log(userData)
   $(event.target).trigger('reset')
   api.updateRun(userData.run.id, userData.run.distance, userData.run.time, userData.run.date)
     .then(ui.updateRunSuccess)
@@ -37,7 +36,7 @@ const onDeleteRun = function (event) {
   event.preventDefault()
   const id = getFormFields(event.target)
   const run = id.run.id
-  console.log(id)
+  // console.log(id)
   api.deleteRun(run)
     .then(() => onGetRun(event))
     .then(ui.onDeleteRunSuccess)

@@ -14,7 +14,7 @@ const onUpdateRunSuccess = function (data) {
 }
 
 const createRunSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   store.runId = data.run.id
   $('#run-message').html('Your run has been created')
 }

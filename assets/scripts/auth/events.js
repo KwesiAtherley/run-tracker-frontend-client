@@ -32,8 +32,6 @@ const onChangePassword = function (event) {
 }
 const onSignOut = function (event) {
   event.preventDefault()
-  // const userData = getFormFields(event.target)
-  // $(event.target).trigger('reset')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure)
