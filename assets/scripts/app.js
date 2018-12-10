@@ -22,4 +22,6 @@ $(() => {
     $('#sign-up').hide()
   })
   $('#create-run').on('submit', runEvents.onCreateRun)
+  $('#activity').on('submit', runEvents.onGetRun)
+  $('update-run').on('submit', runEvents.onUpdateRun)
 })

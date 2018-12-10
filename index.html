@@ -15,10 +15,10 @@
 
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">Run Tracker</a>
-  <button type="button" class="btn btn-outline-danger signup-btn">Sign Up</button>
-  <button type="button" class="btn btn-outline-danger signin-btn">Sign In</button>
-  <button type="button" class="btn btn-outline-danger signout-btn ">Sign Out</button>
-  <button type="button" class="btn btn-outline-danger changepass-btn ">Change Password</button>
+  <button type="button" class="btn btn-outline-success signup-btn">Sign Up</button>
+  <button type="button" class="btn btn-outline-success signin-btn">Sign In</button>
+  <button type="button" class="btn btn-outline-success signout-btn ">Sign Out</button>
+  <button type="button" class="btn btn-outline-success changepass-btn ">Change Password</button>
 
 </nav>
 
@@ -28,7 +28,7 @@
       <input type="email" name="credentials[email]" placeholder="Email">
       <input type="password" name="credentials[password]" placeholder="Password">
       <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-      <input type="submit" value="Sign up!">
+      <button type="submit" class="btn btn-success">Sign up!</button>
     <!-- </fieldset> -->
   </form>
 
@@ -37,14 +37,14 @@
       <legend>Sign in!</legend>
       <input type="email" name="credentials[email]" placeholder="Email">
       <input type="password" name="credentials[password]" placeholder="Password">
-      <input type="submit" value="Sign in!">
+      <button type="submit" class="btn btn-success">Sign in!</button>
     <!-- </fieldset> -->
   </form>
 
   <form id="sign-out" class="hidden">
     <!-- <fieldset> -->
       <legend>Sign Out!</legend>
-      <input type="submit" value="Sign out!">
+      <button type="submit" class="btn btn-success">Sign out!</button>
     <!-- </fieldset -->
   </form>
 
@@ -53,34 +53,29 @@
       <legend>Change Password!</legend>
       <input type="password" name="passwords[old]" placeholder="Old Password">
       <input type="password" name="passwords[new]" placeholder="New Password">
-      <input type="submit" value="Change Password!">
+      <button type="submit" class="btn btn-success">Change Password!</button>
     <!-- </fieldset> -->
   </form>
-
-  <!-- <form>
-  <div class="form-group hidden">
-    <label for="exampleInputEmail1">Distance</label>
-    <input type="text" class="form-control" name='runs[distance]' aria-describedby="emailHelp" placeholder="Miles">
-  </div>
-  <div class="form-group hidden">
-    <label for="exampleInputPassword1">Time</label>
-    <input type="text" class="form-control" name='runs[time]' placeholder="How fast are you?">
-  </div> -->
-  <!-- <div class="form-group hidden">
-    <label for="exampleInputPassword1">Date</label>
-    <input type="date" class="form-control"  name= 'runs[date]'placeholder="When were you fast?">
-  </div> -->
-  <!-- <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> -->
-
 
   <form id="create-run" class="hidden">
     <input name="run[distance]" type="text" placeholder="distance">
     <input name="run[time]" type="text" placeholder="time">
     <input name="run[date]" type="text" placeholder="date">
-    <button type="submit">Create Run</button>
+    <button type="submit" class="btn btn-success">Create Run</button>
+  </form>
+
+  <form id="update-run" class="hidden">
+    <input name="run[distance]" type="text" placeholder="distance">
+    <input name="run[time]" type="text" placeholder="time">
+    <input name="run[date]" type="text" placeholder="date">
+    <button type="submit" class="btn btn-success">Update Run</button>
+  </form>
+
+  <form id="activity" class="hidden">
+    <!-- <fieldset> -->
+      <legend>Activity</legend>
+      <button type="submit" class="btn btn-success">Activity!</button>
+    <!-- </fieldset -->
   </form>
     </body>
 </html>

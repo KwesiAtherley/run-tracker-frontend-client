@@ -27,7 +27,9 @@ const signInSuccess = function (signInResponse) {
   $('#sign-up').addClass('hidden')
   $('#sign-in').fadeOut(200)
   // $('.form-group').removeClass('hidden')
+  $('#update-run').removeClass('hidden')
   $('#create-run').removeClass('hidden')
+  $('#activity').removeClass('hidden')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
