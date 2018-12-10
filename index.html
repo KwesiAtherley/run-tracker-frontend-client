@@ -60,7 +60,7 @@
   <form id="create-run" class="hidden">
     <input name="run[distance]" type="text" placeholder="distance">
     <input name="run[time]" type="text" placeholder="time">
-    <input name="run[date]" type="text" placeholder="date">
+    <input name="run[date]" type="text" placeholder="yyyy-mm-dd">
     <button type="submit" class="btn btn-success">Create Run</button>
   </form>
 
@@ -68,8 +68,16 @@
     <input name="run[distance]" type="text" placeholder="distance">
     <input name="run[time]" type="text" placeholder="time">
     <input name="run[date]" type="text" placeholder="date">
+    <input name="run[id]" type="text" placeholder='run id'>
     <button type="submit" class="btn btn-success">Update Run</button>
   </form>
+
+  <div id="content" class="content"></div>
+    <div class="front-facing">
+    <div id="player-turn"></div>
+    <div id="run-message"></div>
+    <div id="message"></div>
+  </div>
 
   <form id="activity" class="hidden">
     <!-- <fieldset> -->
@@ -77,5 +85,14 @@
       <button type="submit" class="btn btn-success">Activity!</button>
     <!-- </fieldset -->
   </form>
+
+  <form id="delete-run" class="hidden">
+    <!-- <fieldset> -->
+      <legend>Delete</legend>
+      <input name="run[id]" type="text" placeholder='run id'>
+      <button type="submit" class="btn btn-success">Delete Run!</button>
+    <!-- </fieldset -->
+  </form>
+
     </body>
 </html>

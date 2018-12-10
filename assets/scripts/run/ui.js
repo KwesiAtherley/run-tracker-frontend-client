@@ -1,16 +1,30 @@
-//
-// 'use strict'
-//
-// const store = require('../store.js')
-//
-// const onCreateRunSuccess = function (distance, time, date) {
-//   if (store.player === 'x' && store.over === false && store.cells[id] === '') {
-//     $(event.target).html('x')
-//   } else if (store.player === 'o' && store.over === false && store.cells[id] === '') {
-//     $(event.target).html('o')
-//   }
-// }
-//
-// module.exports = {
-//   onCreateRunSuccess
-// }
+'use strict'
+const showRunsTemplate = require('../templates/helpers/runs-listing.handlebars')
+const store = require('../store.js')
+
+const onGetRunSuccess = function (data) {
+  // console.log(data.directors)
+  const showRunsHtml = showRunsTemplate({ runs: data.runs })
+  $('.content').html(showRunsHtml)
+  // $('#directors').html('list of directors')
+}
+
+const onUpdateRunSuccess = function (data) {
+  $('#run-message').html('Your run has been updated')
+}
+
+const createRunSuccess = function (data) {
+  console.log(data)
+  store.runId = data.run.id
+  $('#run-message').html('Your run has been created')
+}
+
+const onDeleteRunSuccess = function (data) {
+  $('#run-message').html('Your run has been deleted')
+}
+module.exports = {
+  onGetRunSuccess,
+  onUpdateRunSuccess,
+  createRunSuccess,
+  onDeleteRunSuccess
+}

@@ -1,0 +1,14 @@
+{{#each this as |run|}}
+ {{log run}}
+
+ {{#run}}
+ <div class="get-runs">
+   <!-- <div data-id="{{id}}" class="names"><strong>Name: </strong> {{first_name}} {{last_name}}</div> -->
+   <div class="distance"><strong>Distance: </strong> {{distance}}</div>
+   <div class="time"><strong>Time: </strong>{{time}}</div>
+   <div class="date"><strong>Date: </strong>{{date}}</div>
+   <div class="id"><strong>Run ID: </strong>{{id}}</div>
+ </div>
+ {{/run}}
+
+{{/each}}

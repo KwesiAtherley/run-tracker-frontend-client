@@ -15,10 +15,7 @@ const failure = function (signUpFailureResponse) {
 }
 
 const signInSuccess = function (signInResponse) {
-  // console.log(signInResponse.user)
-  // console.log('store object before adding user', store)
   store.user = signInResponse.user
-  // console.log('store object after adding user', store)
   $('#message').html('You signed in successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
@@ -30,6 +27,7 @@ const signInSuccess = function (signInResponse) {
   $('#update-run').removeClass('hidden')
   $('#create-run').removeClass('hidden')
   $('#activity').removeClass('hidden')
+  $('#delete-run').removeClass('hidden')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
@@ -48,6 +46,9 @@ const signOutSuccess = function () {
   $('#sign-up').removeClass('hidden')
   // $('#sign-in').fadeIn(200)
   $('#create-run').addClass('hidden')
+  $('#activity').addClass('hidden')
+  $('#update-run').addClass('hidden')
+  $('#delete-run').addClass('hidden')
 }
 module.exports = {
   signUpSuccess,

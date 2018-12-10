@@ -22,27 +22,27 @@ const createRun = (runData) => {
   })
 }
 
-const updateRun = (runData) => {
-  console.log(store.user.token)
+const updateRun = (id, distance, time, date) => {
+  console.log(id)
   return $.ajax({
-    method: 'POST',
-    url: config.apiUrl + '/runs',
+    method: 'PATCH',
+    url: config.apiUrl + `/runs/${id}`,
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
     data: JSON.stringify({
       'run': {
-        'distance': runData.run.distance,
-        'time': runData.run.time,
-        'date': runData.run.date,
+        'distance': distance,
+        'time': time,
+        'date': date,
         'user_id': store.user.id
       }
     })
   })
 }
 const getRun = function () {
-  console.log(store.user.token)
+  // console.log(store.user.token)
   return $.ajax({
     url: config.apiUrl + '/runs',
     method: 'GET',
@@ -52,8 +52,19 @@ const getRun = function () {
     }
   })
 }
+
+const deleteRun = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/runs/${id}`,
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
+  })
+}
 module.exports = {
   createRun,
   getRun,
-  updateRun
+  updateRun,
+  deleteRun
 }
