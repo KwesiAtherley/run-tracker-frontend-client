@@ -3,10 +3,8 @@ const showRunsTemplate = require('../templates/helpers/runs-listing.handlebars')
 const store = require('../store.js')
 
 const onGetRunSuccess = function (data) {
-  // console.log(data.directors)
   const showRunsHtml = showRunsTemplate({ runs: data.runs })
   $('.content').html(showRunsHtml)
-  // $('#directors').html('list of directors')
 }
 
 const onUpdateRunSuccess = function (data) {
@@ -14,13 +12,17 @@ const onUpdateRunSuccess = function (data) {
 }
 
 const createRunSuccess = function (data) {
-  // console.log(data)
   store.runId = data.run.id
+  $('#run-message').show(500)
   $('#run-message').html('Your run has been created')
 }
 
 const onDeleteRunSuccess = function (data) {
   $('#run-message').html('Your run has been deleted')
+  $('#delete-run').trigger('reset')
+  setTimeout(function () {
+    $('#run-message').fadeOut().empty()
+  }, 2000)
 }
 module.exports = {
   onGetRunSuccess,

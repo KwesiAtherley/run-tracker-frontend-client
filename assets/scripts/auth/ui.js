@@ -6,6 +6,7 @@ const signUpSuccess = function (signUpResponse) {
   $('#message').html('You signed up successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').show(500)
 }
 
 const failure = function (signUpFailureResponse) {
@@ -23,17 +24,22 @@ const signInSuccess = function (signInResponse) {
   $('#sign-out').removeClass('hidden')
   $('#sign-up').addClass('hidden')
   $('#sign-in').fadeOut(200)
-  // $('.form-group').removeClass('hidden')
   $('#update-run').removeClass('hidden')
   $('#create-run').removeClass('hidden')
   $('#activity').removeClass('hidden')
   $('#delete-run').removeClass('hidden')
+  $('#message').show(500)
+  $('.signout-btn').removeClass('hidden')
+  $('.changepass-btn').removeClass('hidden')
+  $('.signin-btn').addClass('hidden')
+  $('.signup-btn').addClass('hidden')
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
   $('#message').html('You changed your password successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
+  $('#message').show(500)
 }
 
 const signOutSuccess = function () {
@@ -49,6 +55,11 @@ const signOutSuccess = function () {
   $('#activity').addClass('hidden')
   $('#update-run').addClass('hidden')
   $('#delete-run').addClass('hidden')
+  $('#delete-run').trigger('reset')
+  $('.signin-btn').removeClass('hidden')
+  $('.signup-btn').removeClass('hidden')
+  $('.signout-btn').addClass('hidden')
+  $('.changepass-btn').addClass('hidden')
   $('#content').empty()
   setTimeout(function () {
     $('#message').fadeOut().empty()
