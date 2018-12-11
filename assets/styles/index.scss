@@ -4,6 +4,16 @@
 //   display: none;
 // }
 
+.hero-image {
+  background-image: url("http://www.jonhumphries.com/new-gallery-70/ofhu0cgkgx5zgxm2zxyljdvyw4pmjp");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .get-runs {
   border: 2px solid;
   display: flex;
