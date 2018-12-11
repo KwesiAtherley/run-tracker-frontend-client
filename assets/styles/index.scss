@@ -4,14 +4,14 @@
 //   display: none;
 // }
 
-.hero-image {
-  background-image: url("http://www.jonhumphries.com/new-gallery-70/ofhu0cgkgx5zgxm2zxyljdvyw4pmjp");
+body {
+  background-image: url('http://www.jonhumphries.com/new-gallery-70/ofhu0cgkgx5zgxm2zxyljdvyw4pmjp');
   background-color: #cccccc;
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  // position: relative;
 }
 
 .get-runs {
