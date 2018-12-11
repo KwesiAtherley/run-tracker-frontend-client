@@ -58,17 +58,17 @@
   </form>
 
   <form id="create-run" class="hidden">
-    <input name="run[distance]" type="text" placeholder="distance">
-    <input name="run[time]" type="text" placeholder="time">
+    <input name="run[distance]" type="number" step="0.01" placeholder="distance">
+    <input name="run[time]" type="number" step="0.01" placeholder="time">
     <input name="run[date]" type="date" placeholder="yyyy-mm-dd">
     <button type="submit" class="btn btn-success">Create Run</button>
   </form>
 
   <form id="update-run" class="hidden">
-    <input name="run[distance]" type="text" placeholder="distance">
-    <input name="run[time]" type="text" placeholder="time">
+    <input name="run[distance]" type="number" step="0.01" placeholder="distance">
+    <input name="run[time]" type="number" step="0.01" placeholder="time">
     <input name="run[date]" type="date" placeholder="date">
-    <input name="run[id]" type="text" placeholder='run id'>
+    <input name="run[id]" type="number" placeholder='run id'>
     <button type="submit" class="btn btn-success">Update Run</button>
   </form>
 
