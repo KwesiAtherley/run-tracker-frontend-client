@@ -27,7 +27,7 @@ const onUpdateRun = function (event) {
   // console.log(userData)
   $(event.target).trigger('reset')
   api.updateRun(userData.run.id, userData.run.distance, userData.run.time, userData.run.date)
-    .then(ui.updateRunSuccess)
+    .then(ui.onUpdateRunSuccess)
     .then(() => onGetRun(event))
     .catch(ui.failure)
 }

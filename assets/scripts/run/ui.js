@@ -10,15 +10,22 @@ const onGetRunSuccess = function (data) {
 const onUpdateRunSuccess = function (data) {
   $('#run-message').show(500)
   $('#run-message').html('Your run has been updated')
+  setTimeout(function () {
+    $('#run-message').fadeOut().empty()
+  }, 2000)
 }
 
 const createRunSuccess = function (data) {
   store.runId = data.run.id
   $('#run-message').show(500)
   $('#run-message').html('Your run has been created')
+  setTimeout(function () {
+    $('#run-message').fadeOut().empty()
+  }, 2000)
 }
 
 const onDeleteRunSuccess = function (data) {
+  $('#run-message').show(500)
   $('#run-message').html('Your run has been deleted')
   $('#delete-run').trigger('reset')
   setTimeout(function () {

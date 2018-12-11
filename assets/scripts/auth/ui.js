@@ -6,13 +6,19 @@ const signUpSuccess = function (signUpResponse) {
   $('#message').html('You signed up successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  $('#message').show(500)
+  // $('#message').show(500)
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 2000)
 }
 
 const failure = function (signUpFailureResponse) {
   $('#message').html('Something went wrong, please try again')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 2000)
 }
 
 const signInSuccess = function (signInResponse) {
@@ -33,13 +39,19 @@ const signInSuccess = function (signInResponse) {
   $('.changepass-btn').removeClass('hidden')
   $('.signin-btn').addClass('hidden')
   $('.signup-btn').addClass('hidden')
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 2000)
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
   $('#message').html('You changed your password successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  $('#message').show(500)
+  // $('#message').show(500)
+  setTimeout(function () {
+    $('#message').fadeOut().empty()
+  }, 2000)
 }
 
 const signOutSuccess = function () {
