@@ -23,8 +23,8 @@
 
 ## Wire Frames
 
-[Wire Frames](https://i.imgur.com/2KTC1va.jpg)
+![Wire Frames](https://i.imgur.com/2KTC1va.jpg)
 
 ## ERD IMAGE
 
-[ERD Image](https://i.imgur.com/Pa5mioN.jpg?1)
+![ERD Image](https://i.imgur.com/Pa5mioN.jpg?1)
