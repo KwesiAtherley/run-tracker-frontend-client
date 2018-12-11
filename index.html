@@ -17,8 +17,8 @@
   <a class="navbar-brand" href="#">Run Tracker</a>
   <button type="button" class="btn btn-outline-success signup-btn">Sign Up</button>
   <button type="button" class="btn btn-outline-success signin-btn">Sign In</button>
-  <button type="button" class="btn btn-outline-success signout-btn hidden">Sign Out</button>
-  <button type="button" class="btn btn-outline-success changepass-btn hidden ">Change Password</button>
+  <!-- <button type="button" class="btn btn-outline-success signout-btn hidden">Sign Out</button> -->
+  <!-- <button type="button" class="btn btn-outline-success changepass-btn hidden ">Change Password</button> -->
 
 </nav>
 
@@ -58,17 +58,17 @@
   </form>
 
   <form id="create-run" class="hidden">
-    <input name="run[distance]" type="number" step="0.01" placeholder="distance">
-    <input name="run[time]" type="number" step="0.01" placeholder="time">
+    <input name="run[distance]" type="number" step="0.01" placeholder="Miles">
+    <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
     <input name="run[date]" type="date" placeholder="yyyy-mm-dd">
     <button type="submit" class="btn btn-success">Create Run</button>
   </form>
 
   <form id="update-run" class="hidden">
-    <input name="run[distance]" type="number" step="0.01" placeholder="distance">
-    <input name="run[time]" type="number" step="0.01" placeholder="time">
+    <input name="run[distance]" type="number" step="0.01" placeholder="Miles">
+    <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
     <input name="run[date]" type="date" placeholder="date">
-    <input name="run[id]" type="number" placeholder='run id'>
+    <input name="run[id]" type="number" placeholder='Run Id'>
     <button type="submit" class="btn btn-success">Update Run</button>
   </form>
 
@@ -89,7 +89,7 @@
   <form id="delete-run" class="hidden">
     <!-- <fieldset> -->
       <legend>Delete</legend>
-      <input name="run[id]" type="text" placeholder='run id'>
+      <input name="run[id]" type="text" placeholder='Run Id'>
       <button type="submit" class="btn btn-success">Delete Run!</button>
     <!-- </fieldset -->
   </form>
