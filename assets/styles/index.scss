@@ -5,10 +5,11 @@
 // }
 
 body {
-  background-image: url('http://www.jonhumphries.com/new-gallery-70/ofhu0cgkgx5zgxm2zxyljdvyw4pmjp');
+  background-image: url('https://static1.squarespace.com/static/54205ba1e4b0debb331b066b/5b43ea816d2a73cc9b2e116d/5b46681370a6ad385ad29a8b/1531340854848/SS18_4TH_STREET_BRIDGE_JH_06846.jpg?format=1500w');
   background-color: #cccccc;
   height: 500px;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   // position: relative;
@@ -22,8 +23,21 @@ body {
   margin-left: 50px;
   padding: 30px;
   text-align: center;
+  color: green;
 }
 
 .hidden {
   display: none;
+}
+
+legend {
+  color: green;
+}
+
+#message {
+  color: green;
+}
+
+#run-message {
+  color: green;
 }

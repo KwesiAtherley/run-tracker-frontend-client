@@ -3,16 +3,17 @@
 const store = require('../store.js')
 
 const signUpSuccess = function (signUpResponse) {
+  $('#message').show(500)
   $('#message').html('You signed up successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  // $('#message').show(500)
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 2000)
 }
 
 const failure = function (signUpFailureResponse) {
+  $('#message').show(500)
   $('#message').html('Something went wrong, please try again')
   $('#message').removeClass('success-message')
   $('#message').addClass('error-message')
@@ -23,6 +24,7 @@ const failure = function (signUpFailureResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
+  $('#message').show(500)
   $('#message').html('You signed in successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
@@ -34,7 +36,6 @@ const signInSuccess = function (signInResponse) {
   $('#create-run').removeClass('hidden')
   $('#activity').removeClass('hidden')
   $('#delete-run').removeClass('hidden')
-  $('#message').show(500)
   $('.signout-btn').removeClass('hidden')
   $('.changepass-btn').removeClass('hidden')
   $('.signin-btn').addClass('hidden')
@@ -45,16 +46,17 @@ const signInSuccess = function (signInResponse) {
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
+  $('#message').show(500)
   $('#message').html('You changed your password successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
-  // $('#message').show(500)
   setTimeout(function () {
     $('#message').fadeOut().empty()
   }, 2000)
 }
 
 const signOutSuccess = function () {
+  $('#message').show(500)
   $('#message').html('You signed out successfully')
   $('#message').addClass('success-message')
   $('#message').removeClass('error-message')
@@ -62,7 +64,6 @@ const signOutSuccess = function () {
   $('#change-password').trigger('reset')
   $('#sign-out').addClass('hidden')
   $('#sign-up').removeClass('hidden')
-  // $('#sign-in').fadeIn(200)
   $('#create-run').addClass('hidden')
   $('#activity').addClass('hidden')
   $('#update-run').addClass('hidden')
