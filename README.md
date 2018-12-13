@@ -1,5 +1,9 @@
 ## Run Tracker Front-end Client
 
+The application will serve as a tool for users to track their run activity.
+By allowing users to input details about each run, before it stored in their account.
+While also allowing them to update any run in their catalogue.
+
 ### Run Track Front-end client built using
 * HTML
 * CSS
@@ -26,6 +30,11 @@
 * I want my user to be able to log out of their account.
 * I want my user to be able to add the mileage of their run to their account.
 * I want my user to be able to manipulate the mileage of their runs over a period of time.
+
+### Unsolved Problems
+
+I am yet to move Activity, change password and Sign out buttons to nav bar.
+
 
 ## Wire Frames
 

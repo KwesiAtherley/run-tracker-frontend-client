@@ -11,14 +11,14 @@ const onCreateRun = function (event) {
   $(event.target).trigger('reset')
   api.createRun(userData)
     .then(ui.createRunSuccess)
-    .catch(ui.failure)
+    .catch(ui.createRunFailure)
 }
 const onGetRun = function (event) {
   // const userData = getFormFields(event.target)
   event.preventDefault()
   api.getRun()
     .then(ui.onGetRunSuccess)
-    .catch(ui.failure)
+    .catch(ui.getRunFailure)
 }
 
 const onUpdateRun = function (event) {
@@ -29,7 +29,7 @@ const onUpdateRun = function (event) {
   api.updateRun(userData.run.id, userData.run.distance, userData.run.time, userData.run.date)
     .then(ui.onUpdateRunSuccess)
     .then(() => onGetRun(event))
-    .catch(ui.failure)
+    .catch(ui.updateRunFailure)
 }
 
 const onDeleteRun = function (event) {
