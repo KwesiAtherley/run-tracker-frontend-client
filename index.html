@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Run Tracker</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+
+<div class="big shadow-2">
+<div class="container">
+
+  <nav class="navbar">
+    <a class="navbar-brand" href="#">Run Tracker</a>
+    <button type="button" class="btn btn-outline-* signup-btn">Sign Up</button>
+    <button type="button" class="btn btn-outline-* signin-btn">Sign In</button>
+    <!-- <button type="button" class="btn btn-outline-* signout-btn hidden">Sign Out</button> -->
+    <!-- <button type="button" class="btn btn-outline-* changepass-btn hidden ">Change Password</button> -->
+    <form id="change-password" class="hidden">
+      <!-- <fieldset> -->
+        <!-- <legend>Change Password!</legend> -->
+        <input type="password" name="passwords[old]" placeholder="Old Password">
+        <input type="password" name="passwords[new]" placeholder="New Password">
+        <button type="submit" class="btn btn-outline-*">Change Password!</button>
+      <!-- </fieldset> -->
+    </form>
+
+    <form id="sign-out" class="hidden">
+      <!-- <fieldset> -->
+        <!-- <legend>Sign Out!</legend> -->
+        <button type="submit" class="btn btn-outline-*">Sign out!</button>
+      <!-- </fieldset -->
+    </form>
+  </nav>
+
+
+<form id="sign-up" class=" hidden">
+    <!-- <fieldset> -->
+      <legend>Create Account</legend>
+      <input type="email" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <button type="submit" class="btn btn-outline-* btn-sm">Sign up!</button>
+    <!-- </fieldset> -->
+  </form>
+
+  <form id="sign-in" class="hidden">
+    <!-- <fieldset> -->
+      <legend>Sign in!</legend>
+      <input type="email" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <button type="submit" class="btn btn-outline-* btn-sm">Sign in!</button>
+    <!-- </fieldset> -->
+  </form>
+
+
+  <form id="create-run" class="hidden">
+    <input name="run[distance]" type="number" step="0.01" placeholder="Miles">
+    <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
+    <input name="run[date]" type="date" placeholder="yyyy-mm-dd">
+    <button type="submit" class="btn btn-outline-* btn-sm">Create Run</button>
+  </form>
+
+  <form id="update-run" class="hidden">
+    <input name="run[distance]" type="number" step="0.01" placeholder="Miles">
+    <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
+    <input name="run[date]" type="date" placeholder="date">
+    <input name="run[id]" type="number" placeholder='Run Id'>
+    <button type="submit" class="btn btn-outline-* btn-sm">Update Run</button>
+  </form>
+
+  <div id="content" class="content"></div>
+    <div class="front-facing">
+    <div id="player-turn"></div>
+    <div id="run-message"></div>
+    <div id="message"></div>
+  </div>
+
+  <form id="activity" class="hidden">
+    <!-- <fieldset> -->
+      <legend>Activity</legend>
+      <button type="submit" id="show-all-activity" class="btn btn-outline-* btn-sm">Activity!</button>
+    <!-- </fieldset -->
+  </form>
+
+  <form id="delete-run" class="hidden">
+    <!-- <fieldset> -->
+      <legend>Delete Run!</legend>
+      <input name="run[id]" type="text" placeholder='Run Id'>
+      <button type="submit" class="btn btn-outline-* btn-sm">Delete Run!</button>
+    <!-- </fieldset -->
+  </form>
+</div>
+</div>
+    </body>
+</html>
