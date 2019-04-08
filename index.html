@@ -13,14 +13,18 @@
     </head>
     <body>
 
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Run Tracker</a>
-  <button type="button" class="btn btn-outline-success signup-btn">Sign Up</button>
-  <button type="button" class="btn btn-outline-success signin-btn">Sign In</button>
-  <!-- <button type="button" class="btn btn-outline-success signout-btn hidden">Sign Out</button> -->
-  <!-- <button type="button" class="btn btn-outline-success changepass-btn hidden ">Change Password</button> -->
 
-</nav>
+<div class="big shadow-2">
+<div class="container">
+
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Run Tracker</a>
+    <button type="button" class="btn btn-outline-* signup-btn">Sign Up</button>
+    <button type="button" class="btn btn-outline-* signin-btn">Sign In</button>
+    <button type="button" class="btn btn-outline-* signout-btn hidden">Sign Out</button>
+    <button type="button" class="btn btn-outline-* changepass-btn hidden ">Change Password</button>
+  </nav>
+
 
 <form id="sign-up" class=" hidden">
     <!-- <fieldset> -->
@@ -28,7 +32,7 @@
       <input type="email" name="credentials[email]" placeholder="Email">
       <input type="password" name="credentials[password]" placeholder="Password">
       <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-      <button type="submit" class="btn btn-success">Sign up!</button>
+      <button type="submit" class="btn btn-outline-*">Sign up!</button>
     <!-- </fieldset> -->
   </form>
 
@@ -37,14 +41,14 @@
       <legend>Sign in!</legend>
       <input type="email" name="credentials[email]" placeholder="Email">
       <input type="password" name="credentials[password]" placeholder="Password">
-      <button type="submit" class="btn btn-success">Sign in!</button>
+      <button type="submit" class="btn btn-outline-*">Sign in!</button>
     <!-- </fieldset> -->
   </form>
 
   <form id="sign-out" class="hidden">
     <!-- <fieldset> -->
       <legend>Sign Out!</legend>
-      <button type="submit" class="btn btn-success">Sign out!</button>
+      <button type="submit" class="btn btn-outline-*">Sign out!</button>
     <!-- </fieldset -->
   </form>
 
@@ -53,7 +57,7 @@
       <legend>Change Password!</legend>
       <input type="password" name="passwords[old]" placeholder="Old Password">
       <input type="password" name="passwords[new]" placeholder="New Password">
-      <button type="submit" class="btn btn-success">Change Password!</button>
+      <button type="submit" class="btn btn-outline-*">Change Password!</button>
     <!-- </fieldset> -->
   </form>
 
@@ -61,7 +65,7 @@
     <input name="run[distance]" type="number" step="0.01" placeholder="Miles">
     <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
     <input name="run[date]" type="date" placeholder="yyyy-mm-dd">
-    <button type="submit" class="btn btn-success">Create Run</button>
+    <button type="submit" class="btn btn-outline-*">Create Run</button>
   </form>
 
   <form id="update-run" class="hidden">
@@ -69,7 +73,7 @@
     <input name="run[time]" type="number" step="0.01" placeholder="Minutes">
     <input name="run[date]" type="date" placeholder="date">
     <input name="run[id]" type="number" placeholder='Run Id'>
-    <button type="submit" class="btn btn-success">Update Run</button>
+    <button type="submit" class="btn btn-outline-*">Update Run</button>
   </form>
 
   <div id="content" class="content"></div>
@@ -82,17 +86,18 @@
   <form id="activity" class="hidden">
     <!-- <fieldset> -->
       <legend>Activity</legend>
-      <button type="submit" id="show-all-activity" class="btn btn-success">Activity!</button>
+      <button type="submit" id="show-all-activity" class="btn btn-outline-*">Activity!</button>
     <!-- </fieldset -->
   </form>
 
   <form id="delete-run" class="hidden">
     <!-- <fieldset> -->
-      <legend>Delete</legend>
+      <legend>Delete Run!</legend>
       <input name="run[id]" type="text" placeholder='Run Id'>
-      <button type="submit" class="btn btn-success">Delete Run!</button>
+      <button type="submit" class="btn btn-outline-*">Delete Run!</button>
     <!-- </fieldset -->
   </form>
-
+</div>
+</div>
     </body>
 </html>
