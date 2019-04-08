@@ -5,14 +5,23 @@
 // }
 
 body {
-  // background-image: url('https://static1.squarespace.com/static/54205ba1e4b0debb331b066b/5b43ea816d2a73cc9b2e116d/5b46681370a6ad385ad29a8b/1531340854848/SS18_4TH_STREET_BRIDGE_JH_06846.jpg?format=1500w');
+  background-image: url('https://static1.squarespace.com/static/54205ba1e4b0debb331b066b/5b43ea816d2a73cc9b2e116d/5b46681370a6ad385ad29a8b/1531340854848/SS18_4TH_STREET_BRIDGE_JH_06846.jpg?format=1500w');
   background-color: #F8F8FF;
-  // height: 500px;
-  // background-position: center;
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // position: relative;
+  height: 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.big {
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .get-runs {
@@ -32,24 +41,25 @@ body {
   display: none;
 }
 
-.big {
-  background-color: #F8F8FF;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  padding-top: 20px;
-}
-
 input[type=date] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #a1a2a3;
+    color: rgb(117,117,100);
+}
+
+input[type=email] {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #a1a2a3;
+  color: green;
 }
 
 input[type=number] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #a1a2a3;
+    color: green;
 }
 
 
@@ -57,12 +67,14 @@ input[type=password] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #a1a2a3;
+    color: green;
 }
 
 input[type=text] {
     background: transparent;
     border: none;
     border-bottom: 1px solid #a1a2a3;
+    color: green;
 }
 
 input[type=submit] {
@@ -71,21 +83,22 @@ input[type=submit] {
     border-bottom: 1px solid #a1a2a3;
 }
 
-input[type=email] {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid #a1a2a3;
-}
-
 
 legend {
   color: green;
 }
 
 .navbar {
-  background-color: #F8F8FF;
+  background-color: rgba(0, 0, 0, 0.30);
+  color: green;
+  text-decoration-color: green;
 }
 
+.navbar-brand {
+  background-color: #F8F8FF;
+  color: green;
+  text-decoration-color: green;
+}
 .shadow-2 {
   box-sizing: border-box;
   box-shadow: 10px 15px 15px rgba(0,0,0,0.30);
